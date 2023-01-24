@@ -15,6 +15,7 @@
 
 - Virtual Box 7.0: https://www.virtualbox.org/
 - LLVM 13.0: https://llvm.org/docs/
+- GraphViz: https://graphviz.org/
 - Z3: https://github.com/Z3Prover/z3
 - KLEE 2.2:   https://klee.github.io/tutorials/
 - AFL 2.52b: https://lcamtuf.coredump.cx/afl/, https://github.com/AFLplusplus/AFLplusplus
@@ -52,6 +53,12 @@ sudo ninja install
 ```
 
 Note that if you encounter link errors while building LLVM, try reducing the number of threads in Ninja. Example: ```ninja -j1```
+
+2. If you want to visualize the control flow graph (CFG) produced by LLVM, install the GraphViz tool.
+```shell
+sudo apt-get install graphviz
+```
+
 
 #### Setting up Z3 and KLEE:
 
