@@ -48,46 +48,46 @@ In the GetElement2() function, the undefined variable is loc1. Line 17 uses an u
 ## Example 2 (HeapSort)
 
 ```cpp
-7. void heapify(int arr[], int n, int i)
-8. {
-9. 	// int largest = i; // Initialize largest as root
-10. 	int largest; // BUG!!!
-11. 	int l = 2 * i + 1; // left = 2*i + 1
-12. 	int r = 2 * i + 2; // right = 2*i + 2
-13. 
-14. 	// If left child is larger than root
-15. 	if (l < n && arr[l] > arr[largest])
-16. 		largest = l;
-17. 
-18. 	r = largest;
-19. 
-20. 	// If right child is larger than largest so far
-21. 	if (r < n && arr[r] > arr[largest])
-22. 		largest = r;
-23. 
-24. 	// If largest is not root
-25. 	if (largest != i) {
-26. 		swap(arr[i], arr[largest]);
-27. 
-28. 		// Recursively heapify the affected sub-tree
-29. 		heapify(arr, n, largest);
-30. 	}
-31. }
+6. void heapify(int arr[], int n, int i)
+7. {
+8. 	// int largest = i; // Initialize largest as root
+9.  	int largest; // BUG!!!
+10. 	int l = 2 * i + 1; // left = 2*i + 1
+11. 	int r = 2 * i + 2; // right = 2*i + 2
+12.
+13. 	// If left child is larger than root
+14. 	if (l < n && arr[l] > arr[largest])
+15. 		largest = l;
+16.
+17. 	r = largest;
+18.
+19. 	// If right child is larger than largest so far
+20. 	if (r < n && arr[r] > arr[largest])
+21. 		largest = r;
+22.
+23. 	// If largest is not root
+24. 	if (largest != i) {
+25. 		swap(arr[i], arr[largest]);
+26.
+27. 		// Recursively heapify the affected sub-tree
+28. 		heapify(arr, n, largest);
+29. 	}
+30. }
 ```
 
 For this example, the pass should return the following:
 ```shell
-heapify(int*, int, int) : 15
-heapify(int*, int, int) : 18
+heapify(int*, int, int) : 14
+heapify(int*, int, int) : 17
+heapify(int*, int, int) : 20
 heapify(int*, int, int) : 21
-heapify(int*, int, int) : 22
+heapify(int*, int, int) : 24
 heapify(int*, int, int) : 25
-heapify(int*, int, int) : 26
-heapify(int*, int, int) : 29
+heapify(int*, int, int) : 28
 ```
 ### Explanation:
 
-The undefined variable in the heapify() function is `largest`. So, line 15, 18, 21, 25, 26, 29 might use an undefined variable, and therefore, they are buggy. Note that at line 18, the value of an undefined variable is assigned to the variable `r`, and therefore, the value of `r` at line 22 might be undefined, and thus, line 22 is also buggy.
+The undefined variable in the heapify() function is `largest`. So, line 14, 17, 20, 24, 25, 28 might use an undefined variable, and therefore, they are buggy. Note that at line 17, the value of an undefined variable is assigned to the variable `r`, and therefore, the value of `r` at line 21 might be undefined, and thus, line 21 is also buggy.
 
 ## Running your pass on source code
 

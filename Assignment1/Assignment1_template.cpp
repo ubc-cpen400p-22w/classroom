@@ -44,7 +44,7 @@ void addDebugMetaData(Instruction *I, char *debugInfo) {
   LLVMContext &C = I->getContext();
   MDNode *N = MDNode::get(C, MDString::get(C, debugInfo));
   char DebugMetadata[100];
-  strcpy(DebugMetadata, "cpen400Debug.");
+  strcpy(DebugMetadata, "cpenDebug.");
   strcat(DebugMetadata, debugInfo);
   I->setMetadata(DebugMetadata, N);
 }
