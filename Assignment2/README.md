@@ -18,15 +18,17 @@ Additionally, for each tainted variable, the line number (corresponding to the s
 Unlike the last assignment, you will be responsible for inter-procedural analysis and loops / cycles as well.
 
 Assume the following for this assignment:
-1. `cin` is the only source of tainted data
-2. The end of the program is always located at the last instruction of the `main()` function
-3. Only explicit tainting needs to be considered (where variables are impacted by data flow)
-4. Tainted variables can become untainted again if they are reassigned untainted values under all possible control flow paths. For simplicity, once tainted variables become untainted, they will never be used again (or reassigned another value) in another instruction. Also, tainted variables cannot become untainted while in conditional branches.
+1. `cin` is the only source of tainted data.
+2. The end of the program is always located at the last instruction of the `main()` function.
+3. Only explicit tainting needs to be considered (where variables are impacted by data flow).
+4. Tainted variables can become untainted again if they are reassigned untainted values while in straight-line code (not in any conditional branch). For simplicity, once tainted variables become untainted, they will never be used again (or reassigned another value) in another instruction.
 5. You only have to consider primitive types - aggregates (i.e., arrays) and pointers do not need to be handled.
-6. You only have to consider local variables
+6. You only have to consider local variables.
 7. All function arguments are passed by value. Also, a function call always returns a tainted value if at least one argument is tainted. Otherwise, a function call always returns an untainted value.
-8. Conditionals are neither tauntologies (always true) or contradictions (always false)
-9. All control flow is structured
+8. Conditionals are neither tauntologies (always true) or contradictions (always false).
+9. All control flow is structured.
+10. You are only responsible for determining variable scope created through control flow statements. Programs will not contain lexical scope blocks created by plain braces ie., `{`, `}`.
+
 
 ## Example 1 (Conditional)
 
