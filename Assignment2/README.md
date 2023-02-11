@@ -13,8 +13,9 @@ More information about taint analysis can be found here: [Lecture Slides from CM
 ## Objective
 
 Write a LLVM pass to conduct taint analysis on programs.
-The pass should print out all the explicitly tainted variables at the end of the program (that are in scope) by order in which they were tainted (by line number corresponding to the source code).
-Additionally, for each tainted variable, the line number (corresponding to the source code) where it becomes tainted should be printed out.
+The pass should print out all the explicitly tainted variables that are in scope at the end of the program.
+Additionally, for each tainted variable in scope, print out the line number (corresponding to the source code) where it first becomes tainted.
+The line numbers should be printed out in order.
 Unlike the last assignment, you will be responsible for inter-procedural analysis and loops / cycles as well.
 
 Assume the following for this assignment:
