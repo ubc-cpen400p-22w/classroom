@@ -198,7 +198,9 @@ static RegisterPass<Assignment3> X("heapbugs",
 
 2. Source code of your shared library that tracks and checks the usage of heap memory. Please name this file as `HeapChecker.cpp`.
 
-3. Two test `.cpp` files named `Test1.cpp`, `Test2.cpp` that consist of two unique test cases (scenarios) not described in the examples that test your analysis pass. Include a brief comment at the top of each source file describing what scenario you are testing.
+3. Two test `.c` files named `Test1.c`, `Test2.c` that consist of two unique test cases (scenarios) not described in the examples that test your analysis pass. Include a brief comment at the top of each source file describing what scenario you are testing.
+
+4. Any necessary header files (i.e., interval tree implementation) to run your solution. These will not be marked, however.
 
 ## Evaluation Rubric
 
