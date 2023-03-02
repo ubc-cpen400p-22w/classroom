@@ -1,5 +1,7 @@
 #include <stdio.h>
 #include <unistd.h>
+#include <stdlib.h>
+#include <string.h>
 
 #define BUFSIZE1    512
 #define BUFSIZE2    ((BUFSIZE1/2) - 8)
