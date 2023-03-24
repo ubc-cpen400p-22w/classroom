@@ -171,5 +171,5 @@ Ideally, your report should explain the effectiveness of each program analysis t
 
 A snapshot of your submission folder will be automatically taken by the following deadline:
 
-- Friday, March 24, 2023 23:59:00 PST
+- Saturday, March 25, 2023 23:59:00 PST
 
