@@ -3,6 +3,7 @@
 #include <string.h>
 #include <sys/stat.h>
 #include <fcntl.h>
+#include <unistd.h>
 
 #define MAX_ADDR_LEN 128
 
