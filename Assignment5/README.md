@@ -168,5 +168,5 @@ Then, read from this statistics file in your runtime injection library.
 
 A snapshot of your submission folder will be automatically taken by the following deadline:
 
-- Friday, Apr 7, 2023 23:59:00 PST
+- Tuesday, Apr 11, 2023 23:59:00 PST
 
