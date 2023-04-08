@@ -125,9 +125,9 @@ static RegisterPass<Assignment5> X("faultinjection",
 
 The following assumes that your test source file is named `Quicksort.cpp`.
 
-1. Compile the C++ source code to readable IR (.ll) format. You will want to compile it such that it preserves the original variable names.
+1. Compile the C++ source code to readable IR (.ll) format. You will want to compile it such that it preserves the original variable names and includes debugging information.
 ```bash
-clang++ -O0 -S -emit-llvm -fno-discard-value-names -o Quicksort.ll -c Quicksort.cpp
+clang++ -O0 -g -S -emit-llvm -fno-discard-value-names -o Quicksort.ll -c Quicksort.cpp
 ```
 
 2. Run your LLVM pass using `opt` on the IR file.
